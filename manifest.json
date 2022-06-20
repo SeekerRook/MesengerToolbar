@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "Messenger as a Sidebar (with Toolbar)",
+  "description": "Displays a sidebar that lets you talk to your Facebook friends using Messenger.",
+  "version": "1.0",
+  "applications": {
+    "gecko": {
+      "strict_min_version": "54.0a1"
+    }
+  },
+
+  "icons": {
+    "48": "icons/icon_48.png",
+    "96": "icons/icon_96.png"
+  },
+"browser_action":{
+  "default_icon": {
+    "48": "icons/icon_48.png",
+    "96": "icons/icon_96.png"
+  },
+  "default_title" : "Messenger"
+},
+  "sidebar_action": {
+    "default_icon": {
+      "48": "icons/icon_48.png",
+      "96": "icons/icon_96.png"
+    },
+    "default_title" : "Messenger",
+    "default_panel": "index.html"
+  },
+
+  "background" :{
+    "scripts":[
+      "background.js"
+    ]
+  },
+
+  "permissions": ["storage", "tabs"],
+
+  "commands": {
+
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      }
+    }
+  }
+}
